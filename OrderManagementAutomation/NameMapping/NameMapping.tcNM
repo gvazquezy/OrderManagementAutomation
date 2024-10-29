@@ -3,6 +3,17 @@
 	<Storages Current="0">
 		<Child Name="Default Configuration" />
 	</Storages>
-	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" />
+	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Children>
+			<Child Name="Sys" Key="{A6CA787C-4B8F-410C-A0DC-D8B501E39DC5}">
+				<TypeInfo Item0="{32F4FBCF-B595-410D-B0F8-7715A6D12AF3}" />
+				<Properties>
+					<Property Name="Name">
+						<Value Value="Sys" />
+					</Property>
+				</Properties>
+			</Child>
+		</Children>
+	</Nodes>
 	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" />
 </Root>

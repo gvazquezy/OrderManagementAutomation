@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
 	<children>
-		<child name="Unit1" key="{CAAF2D4F-342F-47B9-896D-07F25E6EB679}" path="Unit1.js" />
+		<folder name="L0 - Test Cases" />
+		<folder name="L1 - Business Actions" />
+		<folder name="L2 - Project Functions" />
+		<folder name="L3 - Common and Support Functions" />
+		<folder name="L4 - Object Maps" />
 	</children>
 </Root>
