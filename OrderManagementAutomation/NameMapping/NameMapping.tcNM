@@ -12,8 +12,66 @@
 						<Value Value="Sys" />
 					</Property>
 				</Properties>
+				<Children>
+					<Child Name="Orders" Key="{F39BEE71-6B96-4084-9997-09541C2AB875}">
+						<TypeInfo Item0="{DAF2A3D1-C456-44DE-A306-A3230B81188F}" />
+						<Properties>
+							<Property Name="ProcessName">
+								<Value Value="Orders" />
+							</Property>
+						</Properties>
+						<Children>
+							<Child Name="MainForm" Key="{8B9BD191-7504-4C41-9139-653E49DE8BCE}">
+								<Image FileName="-1829209458" Left="0" Top="0" Right="912" Bottom="612" />
+								<TypeInfo Item0="{7CA956A8-90DC-41F1-97EF-0995FF701754}" />
+								<Properties>
+									<Property Name="WinFormsControlName">
+										<Value Value="MainForm" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="ToolBar" Key="{09657DDE-0A8D-4F6E-B6C2-89402C334200}">
+										<Image FileName="-698213759" Left="12" Top="76" Right="900" Bottom="118" />
+										<TypeInfo Item0="{17AA3DC8-5416-437C-BD32-3CB6B7BEE831}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="ToolBar" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="StatusBar" Key="{B230709C-7370-41DF-B82F-9BD4DEEDBE03}">
+										<Image FileName="-551580253" Left="12" Top="567" Right="900" Bottom="600" />
+										<TypeInfo Item0="{7F969B35-3563-4A38-802F-4C8F351BFDDF}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="StatusBar" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="OrdersView" Key="{9B714EDF-A46B-4370-AA5A-CA41F0D8A7CE}">
+										<Image FileName="-1105639224" Left="12" Top="118" Right="900" Bottom="567" />
+										<TypeInfo Item0="{12FFA6CF-E92B-4982-9DE0-72704751C8C4}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="OrdersView" />
+											</Property>
+										</Properties>
+									</Child>
+								</Children>
+							</Child>
+						</Children>
+					</Child>
+				</Children>
 			</Child>
 		</Children>
 	</Nodes>
-	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" />
+	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Child Name="Orders" Owner="{F39BEE71-6B96-4084-9997-09541C2AB875}">
+			<Child Name="MainForm" Owner="{8B9BD191-7504-4C41-9139-653E49DE8BCE}">
+				<Child Name="ToolBar" Owner="{09657DDE-0A8D-4F6E-B6C2-89402C334200}" />
+				<Child Name="StatusBar" Owner="{B230709C-7370-41DF-B82F-9BD4DEEDBE03}" />
+				<Child Name="OrdersView" Owner="{9B714EDF-A46B-4370-AA5A-CA41F0D8A7CE}" />
+			</Child>
+		</Child>
+	</LogicalNodes>
 </Root>
