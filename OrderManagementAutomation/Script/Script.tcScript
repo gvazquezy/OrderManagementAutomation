@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
 	<children>
-		<folder name="L0 - Test Cases" />
-		<folder name="L1 - Business Actions" />
-		<folder name="L2 - Project Functions" />
-		<folder name="L3 - Common and Support Functions" />
-		<folder name="L4 - Object Maps" />
+		<folder name="L0 - Test Cases">
+			<child name="DDT_NewOrder" key="{D6BC23C6-FDCA-46FE-B043-479D4FC2FB5A}" path="DDT_NewOrder.js" />
+			<child name="DDT_Orders_CreateNewOrderWithValidData" key="{C152DF73-5911-40AC-8CC8-C02AF8A99F4C}" path="DDT_Orders_CreateNewOrderWithValidData.js" />
+			<child name="DDT_Orders_CreateNewOrderWithInvalidData" key="{C0589EE1-C1DE-421C-8EDC-0126757F4DB6}" path="DDT_Orders_CreateNewOrderWithInvalidData.js" />
+			<child name="DDT_Orders_EditOrder" key="{3C5607D9-CF61-4171-BD72-8EAD44DB49F7}" path="DDT_Orders_EditOrder.js" />
+			<child name="DDT_Orders_DeleteOrder" key="{076D91F2-FEFF-4152-9A15-79D37456169B}" path="DDT_Orders_DeleteOrder.js" />
+			<child name="DDT_Orders_GenerateCustomerReport" key="{98F58BF3-A2F7-4644-A4A7-BF643B5C0C68}" path="DDT_Orders_GenerateCustomerReport.js" />
+			<child name="DDT_Orders_OrderManagement" key="{8F85BDD2-C195-4A4F-879B-0FBD79DEA6C2}" path="DDT_Orders_OrderManagement.js" />
+			<child name="DDT_Orders_CreateNewOrder" key="{E385A830-8CAA-46FF-97D2-99D150A99D94}" path="DDT_Orders_CreateNewOrder.js" />
+			<child name="DDT_Orders_SaveOrder" key="{F2B1121C-AC32-49A4-A91F-7CE144CD0450}" path="DDT_Orders_SaveOrder.js" />
+			<child name="DDT_Orders_OpenSavedOrder" key="{7226F4D0-33B1-40AC-9D2E-D9255D2A6508}" path="DDT_Orders_OpenSavedOrder.js" />
+		</folder>
+		<folder name="L1 - Business Actions">
+			<child name="OrdersActions" key="{93928703-CCEE-4FF0-9918-66C81CE4B1B9}" path="OrdersActions.js" />
+		</folder>
+		<folder name="L2 - Project Functions">
+			<child name="FUNC_Orders_MainForm" key="{58DD48D0-7EDF-4B5E-9FA0-207DECE3FCFF}" path="FUNC_Orders_MainForm.js" />
+			<child name="FUNC_Orders_OrdersForm" key="{73B8217A-2717-4C1B-BB5B-821C2E154EA0}" path="FUNC_Orders_OrdersForm.js" />
+			<child name="FUNC_Orders_GenerateReport" key="{40A63EF6-633A-49FF-A9C9-0CD5C83BA9CB}" path="FUNC_Orders_GenerateReport.js" />
+		</folder>
+		<folder name="L3 - Common and Support Functions">
+			<child name="LIB_COMMON_Utilities" key="{5D6B8AED-05DD-4AB1-9453-8AA6E5A54FFA}" path="LIB_COMMON_Utilities.js" />
+			<child name="LIB_COMMON_Validations" key="{3A6C96A7-F308-41D3-BF49-28D168B32A7E}" path="LIB_COMMON_Validations.js" />
+			<child name="LIB_COMMON_TableUtilities" key="{FC31EFEB-9AFD-44F3-8118-DE584EE2D1AB}" path="LIB_COMMON_TableUtilities.js" />
+			<child name="LIB_COMMON_FileUtilities" key="{60E623DC-15A5-43B7-BAD6-B221790AAC5E}" path="LIB_COMMON_FileUtilities.js" />
+			<child name="LIB_COMMON_EventHandlers" key="{F9DB8CE7-CA3A-464F-9C7A-74F18507ABB1}" path="LIB_COMMON_EventHandlers.js" />
+		</folder>
+		<folder name="L4 - Object Maps">
+			<child name="MAP_ORDERS" key="{02F9E1E7-BCAC-4233-ABD2-8C705DE6E6E8}" path="MAP_ORDERS.js" />
+		</folder>
 		<child name="Unit1" key="{00572F6D-A77F-48A0-B1E2-C4B167422D4D}" path="Unit1.js" />
 	</children>
 </Root>

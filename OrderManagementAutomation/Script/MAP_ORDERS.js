@@ -1,59 +1,55 @@
 ﻿/*
 * Class: MAP_ORDERS.js
 * Ingroup L4 - Object Maps
-* Author: Gonzalo Gonzalez
+* Author: Gonzalo
 * Since: 2024/10/29
 * Copyright (c) 2024, Capgemini Engineering. All Rights reserved.
 *
-* Purpose: This file contains the mappings of the primary elements of the Orders application,
-*          including all relevant fields and controls in the main Orders view and the New Order form.
+* Purpose: Contains the mapped objects from the Orders App.
 */
 
-// Mappings for the main Orders view
-var ordersMainForm = Aliases.Orders.MainForm;
-var toolBar = ordersMainForm.ToolBar;
-var orderTable = ordersMainForm.OrdersView;
-var orderForm = Aliases.Orders.OrderForm;
 
-// Toolbar Buttons
-var newButton = toolBar.New;                   // First icon: New
-var openButton = toolBar.Open;                 // Second icon: Open
-var saveButton = toolBar.Save;                 // Third icon: Save
-var newOrderButton = toolBar.NewOrder;         // Fourth icon: New Order
-var editOrderButton = toolBar.EditOrder;       // Fifth icon: Edit Order
-var deleteOrderButton = toolBar.DeleteOrder;   // Sixth icon: Delete Order
-var viewLargeIconsButton = toolBar.LargeIcons; // Seventh icon: View Large Icons
-var viewSmallIconsButton = toolBar.SmallIcons; // Eighth icon: View Small Icons
-var viewListButton = toolBar.ListView;         // Ninth icon: View List
-var viewDetailsButton = toolBar.DetailsView;   // Tenth icon: View Details
+function MAP_Orders() {
+    return {
+        // Main Form and Toolbar
+        scr_main_mainForm: "Aliases.Orders.MainForm",
+        tbar_main_toolbar: "Aliases.Orders.MainForm.ToolBar",
+        tbl_main_ordersView: "Aliases.Orders.MainForm.OrdersView",
 
-// Order Table Columns (for data verification and interactions)
-var orderTable_CustomerName = orderTable.CustomerName;
-var orderTable_Product = orderTable.Product;
-var orderTable_Quantity = orderTable.Quantity;
-var orderTable_Date = orderTable.Date;
-var orderTable_Street = orderTable.Street;
-var orderTable_City = orderTable.City;
+        // Order Form Fields
+        slc_productName: "Aliases.Orders.OrderForm.Group.ProductNames",
+        slc_quantity: "Aliases.Orders.OrderForm.Group.Quantity",
+        slc_date: "Aliases.Orders.OrderForm.Group.Date",
+        txt_price: "Aliases.Orders.OrderForm.Group.Price",
+        txt_discount: "Aliases.Orders.OrderForm.Group.Discount",
+        txt_total: "Aliases.Orders.OrderForm.Group.groupBox1.Total",
+        txt_customerName: "Aliases.Orders.OrderForm.Group.CustomerName",
+        txt_street: "Aliases.Orders.OrderForm.Group.Street",
+        txt_city: "Aliases.Orders.OrderForm.Group.City",
+        txt_state: "Aliases.Orders.OrderForm.Group.State",
+        txt_zip: "Aliases.Orders.OrderForm.Group.Zip",
 
-// New Order Data
-var orderForm = Aliases.Orders.OrderForm;
-var productField = orderForm.Group.ProductNames;       // Product field
-var quantityField = orderForm.Group.Quantity;         // Quantity field
-var priceField = orderForm.Group.Price;               // Price field
-var discountField = orderForm.Group.Discount;         // Discount field
-var totalField = orderForm.Group.groupBox1.Total;     // Total field
-var dateField = orderForm.Group.Date;                  // Date field
-var customerNameField = orderForm.Group.CustomerName; // Customer Name field
-var streetField = orderForm.Group.Street;           // Street field
-var cityField = orderForm.Group.City;               // City field
-var stateField = orderForm.Group.State;             // State field
-var zipField = orderForm.Group.Zip;                 // Zip field
-var cardTypeVisa = orderForm.Group.Visa;       // Card Type Visa option
-var cardTypeMasterCard = orderForm.Group.MasterCard; // Card Type MasterCard option
-var cardTypeAmEx = orderForm.Group.AE;  // Card Type American Express option
-var cardNumberField = orderForm.Group.CardNo;       // Card Number field
-var expirationDateField = orderForm.Group.ExpDate;  // Expiration Date field
+        // Radio Buttons for Card Type
+        rdb_cardTypeVisa: "Aliases.Orders.OrderForm.Group.Visa",
+        rdb_cardTypeMasterCard: "Aliases.Orders.OrderForm.Group.MasterCard",
+        rdb_cardTypeAmEx: "Aliases.Orders.OrderForm.Group.AE",
 
-// Buttons on Order Form
-var buttonOK = orderForm.ButtonOK;
-var buttonCancel = orderForm.ButtonCancel;
+        // Card Number and Expiration Date Fields
+        txt_cardNumber: "Aliases.Orders.OrderForm.Group.CardNo",
+        slc_expDate: "Aliases.Orders.OrderForm.Group.ExpDate",
+
+        // Order Form Buttons
+        btn_ok: "Aliases.Orders.OrderForm.ButtonOK",
+        btn_cancel: "Aliases.Orders.OrderForm.ButtonCancel",
+
+        // Confirmation Dialog
+        lbl_message: "Aliases.Orders.dlgConfirmation.message",
+        message: "Aliases.Orders.dlgConfirmation",
+        btn_save: "Aliases.Orders.dlgSaveAs.btnSave",
+        btn_confirmation_si: "Aliases.Orders.dlgConfirmation.btnYes",
+        btn_confirmation_no: "Aliases.Orders.dlgConfirmation.btnNo"
+    };
+}
+
+// Export the MAP_ORDERS function as an object
+module.exports.MAP_Orders = MAP_Orders;
