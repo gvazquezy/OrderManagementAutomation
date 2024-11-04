@@ -12,6 +12,7 @@
 			<child name="DDT_Orders_CreateNewOrder" key="{E385A830-8CAA-46FF-97D2-99D150A99D94}" path="DDT_Orders_CreateNewOrder.js" />
 			<child name="DDT_Orders_SaveOrder" key="{F2B1121C-AC32-49A4-A91F-7CE144CD0450}" path="DDT_Orders_SaveOrder.js" />
 			<child name="DDT_Orders_OpenSavedOrder" key="{7226F4D0-33B1-40AC-9D2E-D9255D2A6508}" path="DDT_Orders_OpenSavedOrder.js" />
+			<child name="DDT_OpenApp" key="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}" path="DDT_OpenApp.js" />
 		</folder>
 		<folder name="L1 - Business Actions">
 			<child name="OrdersActions" key="{93928703-CCEE-4FF0-9918-66C81CE4B1B9}" path="OrdersActions.js" />

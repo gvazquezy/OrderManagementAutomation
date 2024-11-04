@@ -13,6 +13,14 @@ var orders_mainForm = require("FUNC_Orders_MainForm");
 var orders_orderForm = require("FUNC_Orders_OrdersForm");
 var reportFunctions = require("FUNC_Orders_GenerateReport");
 var fileUtils = require("LIB_COMMON_FileUtilities");
+var utilities = require("LIB_COMMON_Utilities");
+
+// This function opens the order management application 
+
+function OpenApp() {
+  utilities.LIB_COMMON_Utilities_OpenApp() 
+
+}
 
 /**
  * Opens the New Order form by clicking the corresponding toolbar item.
@@ -128,5 +136,6 @@ module.exports = {
     OrdersActions_GenerateAndSaveCustomerReport,
     OrdersActions_CreateNewOrder,
     OrdersActions_SaveOrder,
-    OrdersActions_OpenSavedOrder
+    OrdersActions_OpenSavedOrder,
+    OpenApp
 };

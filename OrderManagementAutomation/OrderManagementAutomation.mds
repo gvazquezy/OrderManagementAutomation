@@ -2,7 +2,10 @@
 <Root signature="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" version="15.0">
 	<children>
 		<folder name="TestData">
-			<child name="UserForms" key="{68CCC286-CBEB-4402-816E-1AFB1E053748}" type="User Forms" typeId="{1C914193-A452-48E8-A8FD-BCA13ACFF263}" pluginName="User Forms" path="UserForms\UserForms.tcUsrFms" />
+			<folder name="CSV">
+				<child name="OrdersTD.csv" key="{0D66FE64-0DDC-4F9C-A3AF-10D12C83B157}" type="Other File" typeId="{7E17765D-0A59-4C70-A5DA-31DC6D5FED35}" pluginName="Other Files" path="..\..\..\..\Desktop\OrdersTD.csv" />
+				<child name="OrdersTDINVALID.csv" key="{14890B32-A428-49C8-8079-FF5B4BA2313B}" type="Other File" typeId="{7E17765D-0A59-4C70-A5DA-31DC6D5FED35}" pluginName="Other Files" path="..\..\..\..\Desktop\OrdersTDINVALID.csv" />
+			</folder>
 		</folder>
 		<child name="NameMapping" key="{E78B3082-2D60-4B4D-A304-EBE1F85DA0A3}" type="Name Mapping" typeId="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" pluginName="NameMapping" path="NameMapping\NameMapping.tcNM" />
 		<child name="Script" key="{A86804F4-E77F-49B2-8335-4FB18DCFB03C}" type="Script" typeId="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" pluginName="Script" path="Script\Script.tcScript" />
@@ -13,9 +16,14 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{CC56C932-333C-48ED-89C6-9F1E472EEF8B}" version="14">
 		<children>
-			<testItem name="CP01_Creación de Nueva Orden con Datos Correctos" key="{DB24FADC-1DA7-47B4-B006-E1127FCBED87}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+			<testItem name="CP01: Creation of New Order with Correct Data" key="{DB24FADC-1DA7-47B4-B006-E1127FCBED87}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 				<testParameters />
 				<children>
+					<testItem name="OpenApp" key="{FB6763CF-4008-43D8-9448-F7C77464F24B}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
 					<testItem name="DDT_Orders_CreateNewOrderWithValidData" key="{46272705-FF1A-4254-8227-FB76AEA70E26}" group="False" parallel="False" enabled="True" load="False" testMoniker="{C152DF73-5911-40AC-8CC8-C02AF8A99F4C}DDT_Orders_CreateNewOrderWithValidData" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 						<testParameters />
 						<environments activeCloud="CBT" />
@@ -23,9 +31,14 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="CP02_Creación de Nueva Orden con Datos Incorrectos" key="{AADD6F7E-6D86-4C44-BCBE-6E0F77BD2858}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+			<testItem name="CP02: Creation of New Order with Incorrect Data" key="{AADD6F7E-6D86-4C44-BCBE-6E0F77BD2858}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 				<testParameters />
 				<children>
+					<testItem name="OpenApp_2" key="{C9391E6E-A386-479D-84B4-AF1BC874F5C3}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
 					<testItem name="DDT_Orders_CreateNewOrderWithValidData_2" key="{035A6F0E-6F7F-472C-B31B-F8947D7AA1DA}" group="False" parallel="False" enabled="True" load="False" testMoniker="{C152DF73-5911-40AC-8CC8-C02AF8A99F4C}DDT_Orders_CreateNewOrderWithValidData" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 						<testParameters />
 						<environments activeCloud="CBT" />
@@ -33,19 +46,39 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="CP03: Modificación de Orden Existente" key="{CF437F31-ADEE-4B68-8A3D-FAAC25F16B8B}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+			<testItem name="CP03: Modification of Existing Order" key="{CF437F31-ADEE-4B68-8A3D-FAAC25F16B8B}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 				<testParameters />
 				<children>
-					<testItem name="DDT_Orders_DeleteOrder" key="{B03C44D9-7C52-4465-AA41-A07FCF542823}" group="False" parallel="False" enabled="True" load="False" testMoniker="{076D91F2-FEFF-4152-9A15-79D37456169B}DDT_Orders_DeleteOrder" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+					<testItem name="OpenApp_3" key="{C7D799B7-8F84-4F6C-A74F-2C4CA14C1D62}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 						<testParameters />
 						<environments activeCloud="SWT" />
 						<children />
 					</testItem>
+					<testItem name="DDT_Orders_CreateNewOrderWithValidData_3" key="{9A829927-2729-40E7-BDA0-400604C57F37}" group="False" parallel="False" enabled="True" load="False" testMoniker="{C152DF73-5911-40AC-8CC8-C02AF8A99F4C}DDT_Orders_CreateNewOrderWithValidData" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
+					<testItem name="DDT_Orders_EditOrderWithValidData" key="{0133C05A-38F2-4E51-B9F7-39E58118E3EC}" group="False" parallel="False" enabled="True" load="False" testMoniker="{3C5607D9-CF61-4171-BD72-8EAD44DB49F7}DDT_Orders_EditOrderWithValidData" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
 				</children>
 			</testItem>
-			<testItem name="CP04: Eliminación de Ordenes" key="{7D7D77D8-E9F9-46B7-95A5-311019B758B7}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+			<testItem name="CP04: Deletion of Orders" key="{7D7D77D8-E9F9-46B7-95A5-311019B758B7}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 				<testParameters />
 				<children>
+					<testItem name="OpenApp_4" key="{0094939E-B58E-4E1C-9BEA-8E31E87F07AE}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
+					<testItem name="DDT_Orders_CreateNewOrderWithValidData_4" key="{8A2A3E35-0A61-46D8-A617-5A98A1743D0D}" group="False" parallel="False" enabled="True" load="False" testMoniker="{C152DF73-5911-40AC-8CC8-C02AF8A99F4C}DDT_Orders_CreateNewOrderWithValidData" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
 					<testItem name="DDT_Orders_DeleteOrder_2" key="{DCC75E7F-3677-417B-8044-A70E48FE1F72}" group="False" parallel="False" enabled="True" load="False" testMoniker="{076D91F2-FEFF-4152-9A15-79D37456169B}DDT_Orders_DeleteOrder" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 						<testParameters />
 						<environments activeCloud="CBT" />
@@ -53,12 +86,51 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="CP06: Generación de Reporte en TXT" key="{2AE9DD5E-5901-40FE-9117-5D087F7F1642}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+			<testItem name="CP06: Generation of Report in TXT" key="{2AE9DD5E-5901-40FE-9117-5D087F7F1642}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 				<testParameters />
 				<children>
+					<testItem name="OpenApp_5" key="{66C9DE13-61F3-4781-A6A4-8CCFE72DD00E}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
 					<testItem name="DDT_Orders_GenerateCustomerReport" key="{55C775D3-7260-4037-8415-8DED437A2BAC}" group="False" parallel="False" enabled="True" load="False" testMoniker="{98F58BF3-A2F7-4644-A4A7-BF643B5C0C68}DDT_Orders_GenerateCustomerReport" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
 						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="CP07: Save Work with Data" key="{EDA2906A-B15D-45E3-9505-853AF886354B}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+				<testParameters />
+				<children />
+			</testItem>
+			<testItem name="CP08: Open Previously Saved Work" key="{7BD34F70-A8CA-468C-85B9-9578B042C2C6}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+				<testParameters />
+				<children>
+					<testItem name="OpenApp_6" key="{38F648EC-3450-497E-BA90-8B8DEB4424E4}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
+					<testItem name="DDT_Orders_OpenSavedOrder" key="{0183C5A6-4D89-4314-88DB-8B0F793E1A15}" group="False" parallel="False" enabled="True" load="False" testMoniker="{7226F4D0-33B1-40AC-9D2E-D9255D2A6508}DDT_Orders_OpenSavedOrder" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="CP09: Create New Work" key="{243C2E02-7811-4A5C-99D0-9784C7804254}" group="True" parallel="False" enabled="True" load="False" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+				<testParameters />
+				<children>
+					<testItem name="DDT_Orders_CreateNewOrder" key="{C22DFF06-0B50-4EC4-A4F2-FD57B4AE5575}" group="False" parallel="False" enabled="True" load="False" testMoniker="{E385A830-8CAA-46FF-97D2-99D150A99D94}DDT_Orders_CreateNewOrder" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
 						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="OpenApp_7" key="{BEB6AC29-970C-4A50-9101-94A60C595162}" group="False" parallel="False" enabled="True" load="False" testMoniker="{5D14778A-F548-496C-B0EA-E5C1A487E4A6}OpenApp" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+						<testParameters />
+						<environments activeCloud="SWT" />
 						<children />
 					</testItem>
 				</children>
